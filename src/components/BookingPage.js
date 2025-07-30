@@ -27,22 +27,3 @@ export default function BookingPage({ submitForm }) {
     </main>
   );
 }
-
-
-
-// import React from "react";
-// import BookingForm from "./BookingForm";
-
-// function BookingPage() {
-//   return (
-//     <main className="booking-page">
-//       <h1>Reserve Your Table</h1>
-//       <p>Please fill out the form below to make a reservation.</p>
-//       <BookingForm />
-//     </main>
-//   );
-// }
-
-// export default BookingPage;
-
-

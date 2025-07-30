@@ -6,7 +6,7 @@ import female from '../assets/female.png';
 const reviews = [
   { user: 'Alice', comment: 'Amazing food and vibe!', stars: 5, img: female },
   { user: 'Brad', comment: 'Best Mediterranean in town.', stars: 5, img: male },
-  { user: 'Celine', comment: 'Cozy place, friendly staff.', stars: 5, img: female },
+  { user: 'Celine', comment: 'Cozy place, friendly staff.', stars: 4, img: female },
 ];
 
 export default function Testimonials() {

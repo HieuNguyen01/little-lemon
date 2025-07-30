@@ -1,4 +1,3 @@
-// src/Main.js
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
@@ -24,30 +23,3 @@ export default function Main({ submitForm }) {
     </main>
   );
 }
-
-
-// import React from "react";
-// import { Routes, Route } from "react-router-dom";
-
-// import Homepage from "./components/Homepage";
-// import BookingPage from "./components/BookingPage";
-// import ConfirmedBooking from "./components/ConfirmedBooking";
-
-// export default function Main({ submitForm }) {
-//   return (
-//     <Routes>
-//       <Route
-//         path="/"
-//         element={<Homepage />}
-//       />
-//       <Route
-//         path="/reservations"
-//         element={<BookingPage submitForm={submitForm} />}
-//       />
-//       <Route
-//         path="/confirmed"
-//         element={<ConfirmedBooking />}
-//       />
-//     </Routes>
-//   );
-// }

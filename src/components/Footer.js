@@ -1,5 +1,5 @@
-import React from 'react';
-import logo from '../assets/Logo.svg';
+import React from "react";
+import logo from "../assets/Logo.svg";
 import { NavHashLink as Link } from "react-router-hash-link";
 
 // scrollWithOffset: scrolls into view minus header height
@@ -13,38 +13,126 @@ const scrollWithOffset = (el) => {
 
 export default function Footer() {
   return (
-    <footer className="footer-section">
+    <footer className="footer-section" role="contentinfo">
       <div className="container footer-container">
+
         <div className="footer-logo">
-          <Link smooth to="/#home"><img src={logo} alt="Logo" /></Link>
+          <Link
+            smooth
+            to="/#home"
+            scroll={scrollWithOffset}
+            aria-label="Go to homepage"
+          >
+            <img
+              src={logo}
+              alt="Little Lemon Logo"
+              loading="lazy"
+            />
+          </Link>
         </div>
-        <div className="footer-nav">
+
+        <nav
+          className="footer-nav"
+          role="navigation"
+          aria-label="Doormat Navigation"
+        >
           <h4 className="footer-title">Doormat Navigation</h4>
-          <ul>
-            <li><Link smooth to="/#home">Home</Link></li>
-            <li><Link to="#about">About</Link></li>
-            <li><Link to="#specials">Menu</Link></li>
-            <li><Link to="/reservations">Reservations</Link></li>
-            <li><Link to="/order-online">Order Online</Link></li>
-            <li><Link to="/login">Login</Link></li>
+          <ul role="list">
+            <li role="listitem">
+              <Link
+                smooth
+                to="/#home"
+                scroll={scrollWithOffset}
+                aria-label="Home"
+              >
+                Home
+              </Link>
+            </li>
+            <li role="listitem">
+              <Link
+                smooth
+                to="/#about"
+                scroll={scrollWithOffset}
+                aria-label="About"
+              >
+                About
+              </Link>
+            </li>
+            <li role="listitem">
+              <Link
+                smooth
+                to="/#specials"
+                scroll={scrollWithOffset}
+                aria-label="Menu"
+              >
+                Menu
+              </Link>
+            </li>
+            <li role="listitem">
+              <Link
+                to="/reservations"
+                aria-label="Reservations"
+              >
+                Reservations
+              </Link>
+            </li>
+            <li role="listitem">
+              <Link
+                to="/order-online"
+                aria-label="Order Online"
+              >
+                Order Online
+              </Link>
+            </li>
+            <li role="listitem">
+              <Link
+                to="/login"
+                aria-label="Login"
+              >
+                Login
+              </Link>
+            </li>
           </ul>
-        </div>
-        <div className="footer-nav">
+        </nav>
+
+        <nav
+          className="footer-nav"
+          role="navigation"
+          aria-label="Contact Information"
+        >
           <h4 className="footer-title">Contact</h4>
-          <ul>
-            <li><a href="#">Address</a></li>
-            <li><a href="#">Phone number</a></li>
-            <li><a href="#">Email</a></li>
+          <ul role="list">
+            <li role="listitem">
+              <a href="#" aria-label="Address">Address</a>
+            </li>
+            <li role="listitem">
+              <a href="#" aria-label="Phone number">Phone number</a>
+            </li>
+            <li role="listitem">
+              <a href="#" aria-label="Email">Email</a>
+            </li>
           </ul>
-        </div>
-        <div className="footer-nav">
+        </nav>
+
+        <nav
+          className="footer-nav"
+          role="navigation"
+          aria-label="Social Media Links"
+        >
           <h4 className="footer-title">Social media links</h4>
-          <ul>
-            <li><a href="#">Facebook</a></li>
-            <li><a href="#">Instagram</a></li>
-            <li><a href="#">Twitter</a></li>
+          <ul role="list">
+            <li role="listitem">
+              <a href="#" aria-label="Facebook">Facebook</a>
+            </li>
+            <li role="listitem">
+              <a href="#" aria-label="Instagram">Instagram</a>
+            </li>
+            <li role="listitem">
+              <a href="#" aria-label="Twitter">Twitter</a>
+            </li>
           </ul>
-        </div>
+        </nav>
+
       </div>
     </footer>
   );
